@@ -1,4 +1,7 @@
-﻿namespace MethodsExercise
+﻿using System;
+
+namespace MethodsExercise
+
 {
     public class Program
     {
@@ -22,7 +25,19 @@
 
 		
 	        Story(name, least, animal, band); // call the Story method (for exercise #1)
-		Mathmagical(name); // call the Math method (for exercise #2)
+
+		Console.WriteLine("\n"); // Adding in a new line to make the math more readable
+		Console.WriteLine("If we call the Sum method with the numbers three and four, we get the following output:"); // Setting up a reason to call Sum
+		Console.WriteLine(Sum(3, 4)); // calling the Sum method with the numbers there and four (for exercise #2)
+
+		Console.WriteLine("If we call the Sub method with the numbers four and three, we get the following output:"); // Setting up a reason to call Sub
+		Console.WriteLine(Sub(4, 3)); // calling the Sub function with the numbers four and three (for exercise #2)
+
+		Console.WriteLine("If we call the Mult method with the numbers three and four, we get the following output:"); // Setting up a reason to call Mult
+		Console.WriteLine(Mult(3, 4)); // calling the Mult function with the numbers three and four (for exercise #2)
+
+		Console.WriteLine("If we call the Divis method with the numbers six and three, we get the following output:"); // Setting up a reason to call Divis
+		Console.WriteLine(Divis(6, 3));// calling the Divis function with the numbers six and three (for exercise #2)
 	}
 		
 
@@ -33,29 +48,23 @@
 	    }
 
 	
-	public static void Mathmagical (string name)
+	public static int Sum (int a, int b) // method declaration
 	{
-		Console.WriteLine($"Hey there {name}, let's have a little fun and do some math! First, give me a number."); // Output, asking the user for a number
-		var numberOneString = Console.ReadLine(); // user input for variable one
-		int numberOne = Int32.Parse(numberOneString); // convert the user input into an Int
+		return a + b; // return the math
 
-		Console.WriteLine($"Thanks {name}, can you give me a second number as well?"); // Output, asking for a second number
-		var numberTwoString = Console.ReadLine(); // user input for variable two
-		int numberTwo = Int32.Parse(numberTwoString); // convert the user input into an Int
+	}
 
-		int sum = numberOne + numberTwo; // math for the sum.
-		Console.WriteLine($"When you add them up, you get {sum}"); // output for the math
-
-		int sub = numberOne - numberTwo; // math for the subtraction. 
-		Console.WriteLine($"When you subtract them, you get {sub}"); // output for the math
-
-		int multi = numberOne * numberTwo; // math for the multiplication
-		Console.WriteLine($"When you multiply them, you get {multi}"); // output for the math
-
-		double divisio = numberOne / numberTwo; // math for the division
-		Console.WriteLine($"When you divide them, you get {divisio}"); // output for the math
-
-
+	public static int Sub (int a, int b) // declare the method
+	{
+		return a - b; // return the math
+	}
+	public static int Mult (int a, int b) // declare the method
+	{
+		return a * b; // return the math
+	}
+	public static int Divis (int a, int b) // declare the method
+	{
+		return a / b; // return the math
 	}
     }
 }
